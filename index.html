@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATOM STORE | ร้านขายไอดีเกม</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090912;color:white;font-family:Arial,sans-serif}
+header{background:#111121;padding:20px;border-bottom:1px solid #332454}
+.logo{font-size:27px;font-weight:bold;color:#a879ff}
+.logo span{color:#fff}
+header p{color:#aaa;margin-bottom:0}
+.hero{padding:35px 20px;background:linear-gradient(135deg,#25104b,#101b3e,#090912)}
+.hero h1{font-size:30px;margin:5px 0}
+.hero p{color:#ccc;line-height:1.6}
+.tag{color:#c59aff;font-weight:bold}
+.btn{display:inline-block;background:linear-gradient(90deg,#792cff,#315eff);color:white;padding:12px 20px;border:0;border-radius:9px;font-weight:bold;text-decoration:none}
+section{padding:20px}
+h2{font-size:21px}
+.categories{display:flex;gap:10px;flex-wrap:wrap}
+.cat{background:#19192b;padding:12px 16px;border:1px solid #39304f;border-radius:10px;color:#ddd}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.product{background:#171725;border:1px solid #302744;border-radius:13px;overflow:hidden}
+.product .pic{height:110px;background:linear-gradient(135deg,#39206b,#152c5a);display:flex;align-items:center;justify-content:center;font-size:42px}
+.info{padding:12px}
+.info h3{font-size:15px;margin:3px 0 8px}
+.info p{font-size:12px;color:#aaa}
+.price{color:#c49aff;font-weight:bold;font-size:18px;margin:12px 0}
+.buy{width:100%;padding:10px;background:#7136db;color:white;border:0;border-radius:7px;font-weight:bold}
+.note{background:#171725;padding:15px;border-radius:10px;color:#bbb;line-height:1.7;font-size:13px}
+footer{text-align:center;padding:25px;color:#888;background:#111121;margin-top:20px}
+.cart{position:fixed;bottom:15px;right:15px;background:#7937ed;border:0;color:white;padding:14px 19px;border-radius:30px;font-weight:bold;box-shadow:0 4px 20px #0008}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">ATOM <span>STORE</span></div>
+ <p>ร้านจำหน่ายไอดีเกมออนไลน์</p>
+</header>
+
+<div class="hero">
+ <div class="tag">WELCOME TO ATOM STORE</div>
+ <h1>ร้านขายไอดีเกม</h1>
+ <p>เลือกซื้อไอดีเกมที่คุณชื่นชอบ<br>สะดวก รวดเร็ว ใช้งานง่าย</p>
+ <a href="#products" class="btn">เลือกชมสินค้า</a>
+</div>
+
+<section>
+ <h2>🎮 หมวดหมู่สินค้า</h2>
+ <div class="categories">
+  <div class="cat">🎯 ROV</div>
+  <div class="cat">🔫 Free Fire</div>
+  <div class="cat">⚔️ PUBG</div>
+  <div class="cat">🎮 อื่น ๆ</div>
+ </div>
+</section>
+
+<section id="products">
+ <h2>🔥 สินค้าแนะนำ</h2>
+ <div class="products">
+
+  <div class="product">
+   <div class="pic">🎯</div>
+   <div class="info">
+    <h3>ไอดีเกม ROV</h3>
+    <p>รายละเอียดสินค้าและรูปภาพรออัปเดต</p>
+    <div class="price">รอเพิ่มราคา</div>
+    <button class="buy" onclick="add('ไอดีเกม ROV')">สอบถามสินค้า</button>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="pic">🔫</div>
+   <div class="info">
+    <h3>ไอดีเกม Free Fire</h3>
+    <p>รายละเอียดสินค้าและรูปภาพรออัปเดต</p>
+    <div class="price">รอเพิ่มราคา</div>
+    <button class="buy" onclick="add('ไอดีเกม Free Fire')">สอบถามสินค้า</button>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="pic">⚔️</div>
+   <div class="info">
+    <h3>ไอดีเกม PUBG</h3>
+    <p>รายละเอียดสินค้าและรูปภาพรออัปเดต</p>
+    <div class="price">รอเพิ่มราคา</div>
+    <button class="buy" onclick="add('ไอดีเกม PUBG')">สอบถามสินค้า</button>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="pic">🎮</div>
+   <div class="info">
+    <h3>สินค้าอื่น ๆ</h3>
+    <p>พบกับสินค้าเกมเพิ่มเติมเร็ว ๆ นี้</p>
+    <div class="price">รอเพิ่มราคา</div>
+    <button class="buy" onclick="add('สินค้าอื่น ๆ')">สอบถามสินค้า</button>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<section>
+ <h2>💜 เกี่ยวกับ ATOM STORE</h2>
+ <div class="note">
+  ATOM STORE ร้านจำหน่ายไอดีเกมออนไลน์
+  ขณะนี้กำลังเตรียมระบบสินค้าและระบบสั่งซื้อ
+  กรุณาตรวจสอบข้อมูลสินค้าก่อนทำรายการ
+ </div>
+</section>
+
+<footer>
+ <div class="logo">ATOM STORE</div>
+ <p>© 2026 ATOM STORE</p>
+ <p>Gaming Digital Store</p>
+</footer>
+
+<button class="cart" onclick="showCart()">🛒 สินค้าที่เลือก (<span id="count">0</span>)</button>
+
+<script>
+let cart=[];
+function add(name){
+ cart.push(name);
+ document.getElementById('count').textContent=cart.length;
+ alert('เพิ่ม '+name+' แล้ว กรุณาติดต่อร้านเพื่อสอบถามราคาและสินค้า');
+}
+function showCart(){
+ alert(cart.length ? 'สินค้าที่เลือก:\n'+cart.join('\n') : 'ยังไม่ได้เลือกสินค้า');
+}
+</script>
+
+</body>
+</html>
